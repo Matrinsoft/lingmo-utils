@@ -1,0 +1,3 @@
+usr/include/LingmoUtils/
+usr/lib/*/libLingmoUtils.so
+usr/lib/*/cmake/LingmoUtils/

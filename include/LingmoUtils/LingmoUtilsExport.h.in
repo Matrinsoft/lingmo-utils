@@ -1,0 +1,14 @@
+#pragma once
+
+#include <QtCore/qglobal.h>
+
+#if defined(LINGMOUTILS_LIBRARY)
+#  define LINGMOUTILS_EXPORT Q_DECL_EXPORT
+#else
+#  define LINGMOUTILS_EXPORT Q_DECL_IMPORT
+#endif
+
+#if defined(LINGMOUTILS_STATIC)
+#  undef LINGMOUTILS_EXPORT
+#  define LINGMOUTILS_EXPORT
+#endif

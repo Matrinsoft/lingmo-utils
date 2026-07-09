@@ -1,0 +1,27 @@
+Source: lingmo-utils
+Section: libs
+Priority: optional
+Maintainer: Lingmo OS Team <team@lingmo.org>
+Build-Depends: debhelper-compat (= 13),
+               cmake (>= 3.21),
+               qt6-base-dev (>= 6.5)
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: liblingmoutils1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Lingmo Desktop - Utility library (shared library)
+ Lingmo Utils provides common utility functions for Lingmo Desktop
+ components, including structured logging, file operations, XDG
+ path resolution, and process management.
+
+Package: liblingmoutils-dev
+Architecture: any
+Section: libdevel
+Depends: liblingmoutils1 (= ${binary:Version}),
+         qt6-base-dev (>= 6.5),
+         ${misc:Depends}
+Description: Lingmo Desktop - Utility library (development files)
+ This package contains the development headers and CMake integration
+ for Lingmo Utils.
